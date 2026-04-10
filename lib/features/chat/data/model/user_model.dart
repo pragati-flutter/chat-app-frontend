@@ -4,14 +4,14 @@ class UserModel extends UserEntity{
   const UserModel( {required super.userId, required super.userName});
 
   factory UserModel.fromUser(Map<String,dynamic>json){
-    return UserModel(userId:json['userId'] , userName: json['userName']);
+    return UserModel(userId:json['userId'] , userName: json['username'] ?? 'unknown');
 
   }
 
   Map<String,dynamic>toJson(){
     return{
       'userId':userId,
-      'userName':userName
+      'username':userName
     };
   }
 

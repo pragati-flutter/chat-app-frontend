@@ -5,6 +5,6 @@ class GetUserUseCase{
   const GetUserUseCase(this.chatRepository);
 
   void call(){
-    chatRepository.getOnlineUser();
+    chatRepository.getOnlineUsers();
   }
 }

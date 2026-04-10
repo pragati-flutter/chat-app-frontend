@@ -17,4 +17,14 @@ class MessageEntity extends Equatable {
 
   @override
   List<Object?> get props => [fromUserName, fromUserId, toUserId, time, text];
+
+  MessageEntity toEntity() {
+    return MessageEntity(
+      fromUserName: fromUserName,
+      fromUserId: fromUserId,
+      toUserId: toUserId,
+      time: time,
+      text: text,
+    );
+  }
 }
